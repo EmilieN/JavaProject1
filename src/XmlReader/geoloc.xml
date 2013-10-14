@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<geo>
+    <point>
+        <lat>115468.2</lat>
+        <lon>125484.3</lon>
+        <title>Location 1</title>
+    </point>
+    <point>
+        <lat>548872.3</lat>
+        <lon>588964.4</lon>
+        <title>Location 2</title>
+    </point>
+</geo>

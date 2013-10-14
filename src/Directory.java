@@ -2,8 +2,12 @@ import java.util.Vector;
 
 
 public class Directory {
+	/**
+	 * @author emilie navarro
+	 * 
+	 * */
 	
-	protected Vector<Person> persons;
+	protected Vector<Person> persons = null;
 	
 	public static void main(String[] args) {
 		
@@ -28,6 +32,14 @@ public class Directory {
 		persons = new Vector<Person>();
 		
 	}
+	
+	/**
+	 * Fonction qui crée une personne et l'ajoute à l'annuaire
+	 * @param name le nom de la personne
+	 * @param surname le prénom de la personne
+	 * @param phoneNumber le numéro de téléphone
+	 * @param id l'id de la personne
+	 * */
 	
 	public void addPerson(String name, String surname, String phoneNumber, int id) {
 		Person p = new Person();

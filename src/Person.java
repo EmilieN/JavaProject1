@@ -7,7 +7,7 @@ public class Person {
 	protected Address address;
 	protected String phoneNumber;
 	protected int id;
-	protected Vector<Contact> pContacts;
+	protected Vector<Contact> pContacts = null;
 	
 	//Constructor
 	public Person() {
@@ -81,10 +81,19 @@ public class Person {
 	
 	// Add & remove contact
 	public void addContact(String type, String value) {
-		Contact c = new Contact();
-		c.type = type;
-		c.valeur = value;
-		pContacts.addElement(c);
+		boolean found = false;
+		for(Contact c : pContacts) {
+			if(c.getType() == type && c.getValeur() == value) {
+				found = true;
+			}
+		}
+		
+		if(!found) {
+			Contact c = new Contact();
+			c.type = type;
+			c.valeur = value;
+			pContacts.addElement(c);
+		}
 	}
 	
 	public void removeContact(String type) {
@@ -93,5 +102,9 @@ public class Person {
 				pContacts.removeElement(c);
 			}
 		}
+	}
+	
+	public String toXml() {
+		return "";
 	}
 }
